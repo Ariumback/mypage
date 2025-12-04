@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>ポートフォリオ</title>
+        <title>MyPage</title>
         <style>
             body {
                 text-align: center;
@@ -41,11 +41,25 @@
                 transform: translateY(-5px);  /* 上に5ピクセル移動する */
                 box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* 影を濃く・大きくする */
             }
+            @media (min-width: 768px) {
+
+                .card-list {
+                    display: flex;        /* 横並びモードON */
+                    flex-wrap: wrap;      /* 入り切らなかったら折り返す */
+                    justify-content: center; /* 真ん中寄せ */
+                    gap: 20px;            /* カード同士の隙間 */
+                }
+
+                .card {
+                    width: 40%;           /* 画面の40%の幅にする（これで2列になる） */
+                    margin: 0;            /* 親箱のgapで隙間を作るので、marginはリセット */
+                }
+            }
         </style>
     </head>
     <body>
-        <h1>ポートフォリオ</h1>
-            <p>私の名前</p>
+        <h1>Terrariumのページ</h1>
+            <p>ここに入力</p>
         <h2>私のこと</h2>
             <p>
                 <img src = "https://placehold.jp/150x150.png" alt = "プロフィール">
@@ -55,26 +69,28 @@
                 <li>Python</li>
             </ul>
         <h2>私の作品</h2>
-            <div class = "card">
-                <h3>あいうえお</h3>
-                    <p>やっぱっぱー</p>
-            </div>
-            <div class = "card">
-                <h3>あいうえこ</h3>
-                    <p>やっぱっぱー</p>
-            </div>
-            <div class = "card">
-                <h3>あいうえそ</h3>
-                    <p>やっぱっぱー</p>
-            </div>
-            <div class = "card">
-                    <h3>あいうえと</h3>
+            <div class = "card-list">
+                <div class = "card">
+                    <h3>あいうえお</h3>
                         <p>やっぱっぱー</p>
+                </div>
+                <div class = "card">
+                    <h3>あいうえこ</h3>
+                        <p>やっぱっぱー</p>
+                </div>
+                <div class = "card">
+                    <h3>あいうえそ</h3>
+                        <p>やっぱっぱー</p>
+                </div>
+                <div class = "card">
+                        <h3>あいうえと</h3>
+                            <p>やっぱっぱー</p>
+                </div>
             </div>
                 
         <h2>私の連絡先</h2>
             <p>
-                連絡は<a href = "URL">こちら</a>から
+                連絡は<a href = "URL">こちら</a>から(今は特にありません)
             </p>
     </body>
 </html>
