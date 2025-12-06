@@ -10,9 +10,29 @@
                 font-family: sans-serif;
             }
             nav {
-                background-color: #D3C6A6;
-                padding: 15px;
+                background-color: #dbceac;
+                border-radius: 30px;
+                padding: 20px;
                 margin-bottom: 30pm;
+            }
+            nav a {
+                width: auto;
+                display: inline-block;   /* これで幅や高さを指定できるようになる */
+                background-color: white;  /* ボタンの色（黒） */
+                border: 0.0px solid #000; /* 黒い枠線 */ 
+                color: black;            /* 文字の色（白） */
+                text-decoration: none;   /* 下線を消す */
+                padding: 20px 40px;      /* ボタンの大きさ（上下10px、左右30px） */
+                border-radius: 30px;      /* 角を少し丸くする */
+                margin: 0 10px;          /* ボタン同士の隙間 */
+                transition: 0.3s;    
+                box-sizing: border-box;    /* ホバー時の動きを滑らかに */
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* ほんのり影をつける */
+                transition: 0.3s;
+            }
+            nav a:hover {
+                transform: translateY(-5px);  /* 上に5ピクセル移動する */
+                box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* 影を濃く・大きくする */
             }
             h1 {
                 color: #333333;
